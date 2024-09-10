@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+    
+
+
+    <title>FRIEND-HUB</title>
+ 
+
+	 <style type="text/css">
+	 	
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+   
+		.tab {
+		  float: left;
+		  border: 1px solid #ccc;
+		  background-color:#0ecd67;
+		  width: 17%;
+		  height:100vh;
+		  margin-left: -2px;
+		  margin-top:-2px;
+		  
+		}
+
+		.tab a{
+
+			 display: block;	  	
+		 	 color: white;
+		  	 padding: 10px 20px;		    	   
+		     cursor: pointer;		    
+		     font-size: 17px;
+		     text-decoration: none;		   
+
+		}
+
+		
+
+		.homeContent {
+          border: px solid;
+		  float: left;
+		  width: 83%;
+		  height: 90%;
+		 /* margin-left: 2px;*/
+		 		      
+		}
+		
+		.homeContent .header{
+                    
+          
+    height: 65px;
+    margin: 5px;
+    padding: 5px; 
+    border-bottom: 2px solid #cccc; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+			
+		
+		
+		
+		
+		    .container {
+            border: px solid;
+            display: flex;
+            justify-content: center;
+           /* align-items: center; */
+            height: 795px; 
+            flex-direction: column; 
+        }
+
+        .desktop {
+           
+            padding: 20px;
+            background-color: #fff;
+            height: 95%;
+            width: 100%;
+            overflow-y: scroll;
+            
+            border: px solid;
+            
+            
+        }
+
+        input[type = text] {
+            padding: 10px;
+           /* border-radius: 5px;*/
+           /* border-color: #eee; */
+           border:none;
+            /*box-shadow:0 .5rem 1.5rem rgba(0, 0, 0, 0.1);*/
+            width: 92%;
+            height:50px;
+            border: px solid;
+           
+            border-top: 2px solid #cccc; 
+           
+        }
+
+        input[type = submit] {
+            color: white;
+            background-color: #192a56;
+            padding: 10px;  
+            border: none;
+             height:50px;
+             width: 7%;
+        }
+        
+        .show{
+            
+            color: white;
+            display:none;
+            
+            width:10%;
+            background-color: #192a56;
+            padding: 8px;  
+            border: none;
+            height:30px;
+            text-decoration:none;
+            
+        }
+        .msg{
+            border:1px solid #ccc;
+            margin: 5px ;
+            padding:15px;
+            border-radius:5px;
+            background-color:#3CB371;
+           
+            
+        }
+            p{
+                color:#f8f8ff;
+                font-size:15px;
+            }
+            h6{
+                color:#272423;
+              /*  float:right;*/
+               margin-left: 87%;
+            }
+
+
+    @media (max-width: 768px) {
+        
+        .show{
+            display:block;
+            color: white;
+            width:30%;
+            background-color: #192a56;
+            padding: 10px;  
+            border: none;
+            height:40px;
+            text-decoration:none;
+            margin-left:65px;
+            text-align:center;
+            
+        }
+        
+            .tab {
+                display:none;
+                
+            }
+            .homeContent {
+               
+		        width: 100%;
+		        height: 100%;
+               
+            }
+            
+            
+            input[type = text] {
+               
+                border-radius: 5px;
+                border:1px solid #cccc;
+                width: 70%;
+                height:40px;
+                margin-left:25px;
+           
+        }
+
+        input[type = submit] {
+           
+            height:40px;
+            border-radius: 5px;
+        }
+
+        }
+
+	
+	 </style>
+	
+</head>
+<body>
+  
+
+	<section class="tab">				
+
+			<a href="main.html"><i class="fa-solid fa-plus" style="color: #192a56;"></i>  Create New Room</a>
+			<a id="#"><i class="fa-solid fa-link" style="color: #192a56;"></i>  Copy Room Link</a>
+			<a href="main.html"><i class="fa-solid fa-trash" style="color: #f00f26;"></i>   Delete Room</a>
+
+			
+			
+			
+			  
+    </section>	
+
+
+    <section class="homeContent">
+        
+        <section class="header">
+
+            
+
+		<img src="ali.jpg" height="45px" style="margin-right: 15px; border-radius: 5px;">
+
+		<h2 style="color: #192a56; font-family: 'Arial', sans-serif; font-size: 24px; text-transform: uppercase; letter-spacing: 2px; "><?php echo $room_name; ?></h2>	
+		
+			<a class = "show" href="new.php">Click Me</a>
+		
+	    </section>
+	    
+	    
+    
+               
+             
+    
+
+    <section class="container">
+        
+
+        <div class="desktop" id="chatMsg" > 
+            
+            <div class='msg'>
+        
+                <p> Hi, How was the day ?  </p>
+                <h6> 9-9-2024 10:30 PM</h6>
+        
+            </div>
+            
+
+        </div>
+
+    </section>
+
+    <form method="post" action="#">
+
+        <input type="text" name="text" placeholder="Type Your Message Here" autocomplete = 'off'>
+        <input type="submit" name="submit" value="Send">
+
+    </form>
+
+
+  </section>
+  
+  
+  
+</body>
+</html>
